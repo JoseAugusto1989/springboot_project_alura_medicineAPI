@@ -1,5 +1,6 @@
 package com.medicine.course.Medicine.models.request;
 
+import com.medicine.course.Medicine.enums.MedicalSpeciality;
 import com.medicine.course.Medicine.util.Regex;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -34,11 +35,10 @@ public class DoctorDto {
     private String crm;
 
     @Enumerated(EnumType.STRING)
-    private Speciality speciality;
+    private MedicalSpeciality speciality;
 
     private Boolean active;
 
-    @NotBlank
     @Valid
-    private AddressDto address;
+    private Address address;
 }

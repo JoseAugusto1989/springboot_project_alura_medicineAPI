@@ -1,6 +1,6 @@
 package com.medicine.course.Medicine.models.request;
 
-import com.medicine.course.Medicine.entities.State;
+import com.medicine.course.Medicine.enums.State;
 import com.medicine.course.Medicine.util.Regex;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Embeddable
-public class AddressDto {
+public class Address {
 
     @NotBlank
     @Column(name = "CEP")

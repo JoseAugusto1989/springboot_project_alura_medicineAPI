@@ -1,7 +1,7 @@
 package com.medicine.course.Medicine.entities;
 
-import com.medicine.course.Medicine.models.Laboratory;
-import com.medicine.course.Medicine.models.Way;
+import com.medicine.course.Medicine.enums.Laboratory;
+import com.medicine.course.Medicine.enums.Way;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

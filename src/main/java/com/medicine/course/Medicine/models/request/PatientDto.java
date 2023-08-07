@@ -25,14 +25,12 @@ public class PatientDto {
 
     @NotBlank
     @Pattern(regexp = Regex.CPF_REGEX_WITH_MASK, message = "Invalid phone number. Please use the format XXX.XXX.XXX-XX.")
-
     private String cpf;
 
     @NotBlank
     @Pattern(regexp = Regex.PHONE_REGEX_WITH_MASK, message = "Invalid phone number. Please use the format (XX) XXXXX-XXXX.")
     private String phone;
 
-    @NotBlank
     @Valid
-    private AddressDto address;
+    private Address address;
 }

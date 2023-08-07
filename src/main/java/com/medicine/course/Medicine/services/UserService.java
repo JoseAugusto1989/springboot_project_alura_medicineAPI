@@ -1,6 +1,6 @@
 package com.medicine.course.Medicine.services;
 
-import com.medicine.course.Medicine.models.request.AddressDto;
+import com.medicine.course.Medicine.models.request.Address;
 import com.medicine.course.Medicine.models.request.UserDto;
 import com.medicine.course.Medicine.entities.UserApi;
 import com.medicine.course.Medicine.exception.ObjectNotFoundException;
@@ -32,7 +32,7 @@ public class UserService {
             String encode = passwordEncrypt.getPasswordEncoder(userDto.getPassword());
             user.setPassword(encode);
 
-            AddressDto address = new AddressDto();
+            Address address = new Address();
             address.setCity(userDto.getAddress().getCity());
             address.setDistrict(userDto.getAddress().getDistrict());
             address.setUf(userDto.getAddress().getUf());

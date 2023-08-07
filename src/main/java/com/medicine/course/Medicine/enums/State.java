@@ -1,4 +1,4 @@
-package com.medicine.course.Medicine.entities;
+package com.medicine.course.Medicine.enums;
 
 public enum State {
     AC("Acre"),

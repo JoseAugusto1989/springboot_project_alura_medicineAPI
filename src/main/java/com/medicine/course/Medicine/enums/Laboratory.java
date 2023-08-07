@@ -1,4 +1,4 @@
-package com.medicine.course.Medicine.models;
+package com.medicine.course.Medicine.enums;
 
 public enum Laboratory {
 

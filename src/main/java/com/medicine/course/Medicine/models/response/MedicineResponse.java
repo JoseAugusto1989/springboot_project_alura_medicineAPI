@@ -1,6 +1,6 @@
 package com.medicine.course.Medicine.models.response;
 
-import com.medicine.course.Medicine.models.Laboratory;
+import com.medicine.course.Medicine.enums.Laboratory;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

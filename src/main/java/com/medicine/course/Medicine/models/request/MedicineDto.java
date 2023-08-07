@@ -1,7 +1,7 @@
 package com.medicine.course.Medicine.models.request;
 
-import com.medicine.course.Medicine.models.Laboratory;
-import com.medicine.course.Medicine.models.Way;
+import com.medicine.course.Medicine.enums.Laboratory;
+import com.medicine.course.Medicine.enums.Way;
 import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotBlank;

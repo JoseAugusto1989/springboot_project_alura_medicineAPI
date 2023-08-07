@@ -33,10 +33,10 @@ public class PatientController {
     private final DateUtil dateUtil;
 
     @PostMapping
-    public ResponseEntity<Patient> registerPatient(@RequestBody @Valid PatientDto patientDto) {
+    public ResponseEntity<String> registerPatient(@RequestBody @Valid PatientDto patientDto) {
         log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
         patientService.registerPatient(patientDto);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok("Patient register successfully");
     }
 
     @GetMapping

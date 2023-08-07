@@ -1,7 +1,7 @@
 package com.medicine.course.Medicine.entities;
 
-import com.medicine.course.Medicine.models.request.AddressDto;
-import com.medicine.course.Medicine.models.request.Speciality;
+import com.medicine.course.Medicine.models.request.Address;
+import com.medicine.course.Medicine.enums.MedicalSpeciality;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
@@ -44,12 +44,12 @@ public class Doctor {
 
     @Column(name = "ESPECIALIDADE")
     @Enumerated(EnumType.STRING)
-    private Speciality speciality;
+    private MedicalSpeciality speciality;
 
     @NotNull
     @Column(name = "ATIVO")
     private Boolean active;
 
     @Embedded
-    private AddressDto address;
+    private Address address;
 }

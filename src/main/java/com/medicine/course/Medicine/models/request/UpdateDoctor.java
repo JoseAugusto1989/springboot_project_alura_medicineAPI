@@ -29,5 +29,5 @@ public class UpdateDoctor {
 
     @NotBlank
     @Valid
-    private AddressDto address;
+    private Address address;
 }

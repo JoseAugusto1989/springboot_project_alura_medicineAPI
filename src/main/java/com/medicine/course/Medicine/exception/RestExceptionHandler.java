@@ -34,4 +34,9 @@ public class RestExceptionHandler {
                 new Date());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
     }
+
+    @ExceptionHandler(ValidationException.class)
+    public ResponseEntity handleBusinessErrorException(ValidationException ex) {
+        return ResponseEntity.badRequest().body(ex.getMessage());
+    }
 }

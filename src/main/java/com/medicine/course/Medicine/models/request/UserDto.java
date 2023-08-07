@@ -38,5 +38,5 @@ public class UserDto {
 
     @NotNull
     @Valid
-    private AddressDto address;
+    private Address address;
 }

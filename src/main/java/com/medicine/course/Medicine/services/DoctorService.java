@@ -2,7 +2,7 @@ package com.medicine.course.Medicine.services;
 
 import com.medicine.course.Medicine.entities.Doctor;
 import com.medicine.course.Medicine.exception.ObjectNotFoundException;
-import com.medicine.course.Medicine.models.request.AddressDto;
+import com.medicine.course.Medicine.models.request.Address;
 import com.medicine.course.Medicine.models.request.DoctorDto;
 import com.medicine.course.Medicine.models.request.UpdateDoctor;
 import com.medicine.course.Medicine.models.response.DoctorResponse;
@@ -39,8 +39,9 @@ public class DoctorService {
             doctor.setCrm(doctorDto.getCrm());
             doctor.setSpeciality(doctorDto.getSpeciality());
             doctor.setPhone(doctorDto.getPhone());
+            doctor.setActive(true);
 
-            AddressDto address = configureAddressDto(doctorDto.getAddress(), new AddressDto());
+            Address address = configureAddressDto(doctorDto.getAddress(), new Address());
             doctor.setAddress(address);
             doctor = doctorRepository.save(doctor);
             return doctor;

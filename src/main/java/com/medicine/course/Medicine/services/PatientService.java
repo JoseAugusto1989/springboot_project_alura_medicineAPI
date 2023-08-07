@@ -2,7 +2,7 @@ package com.medicine.course.Medicine.services;
 
 import com.medicine.course.Medicine.entities.Patient;
 import com.medicine.course.Medicine.exception.ObjectNotFoundException;
-import com.medicine.course.Medicine.models.request.AddressDto;
+import com.medicine.course.Medicine.models.request.Address;
 import com.medicine.course.Medicine.models.request.PatientDto;
 import com.medicine.course.Medicine.models.response.PatientResponse;
 import com.medicine.course.Medicine.repositories.PatientRepository;
@@ -35,11 +35,12 @@ public class PatientService {
             patient.setPhone(patientDto.getPhone());
             patient.setEmail(patientDto.getEmail());
             patient.setCpf(patientDto.getCpf());
+            patient.setActive(true);
 
-            AddressDto address = configureAddressDto(patientDto.getAddress(), new AddressDto());
+            Address address = configureAddressDto(patientDto.getAddress(), new Address());
             patient.setAddress(address);
-            patient = patientRepository.save(patient);
-            return patient;
+
+            return patientRepository.save(patient);
 
         } catch (ObjectNotFoundException e) {
             logger.error("Error saving patient: {}", e.getMessage());
@@ -56,7 +57,7 @@ public class PatientService {
             existingPatient.setEmail(patientDto.getEmail());
             existingPatient.setCpf(patientDto.getCpf());
 
-            AddressDto address = configureAddressDto(patientDto.getAddress(), new AddressDto());
+            Address address = configureAddressDto(patientDto.getAddress(), new Address());
             existingPatient.setAddress(address);
             existingPatient = patientRepository.save(existingPatient);
             return new PatientResponse("Patient updated successfully, with name: ", existingPatient.getName());
